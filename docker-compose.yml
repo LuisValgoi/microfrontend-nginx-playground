@@ -1,0 +1,27 @@
+version: "3.7"
+services:
+  app-react01:
+    container_name: app-react01
+    build:
+      context: ./react01
+
+  app-react02:
+    container_name: app-react02
+    build:
+      context: ./react02
+
+  app-react03:
+    container_name: app-react03
+    build:
+      context: ./react03
+
+  orchestrator:
+    container_name: orchestrator
+    ports:
+      - 80:80
+    depends_on:
+      - app-react01
+      - app-react02
+      - app-react03
+    build:
+      context: .
