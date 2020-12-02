@@ -6,13 +6,13 @@ This project was created to better understand the usage of NGINX helper when arc
 
 The NGINX orchestrator its done via build-code (after run `npm run build` in the projects).
 
-It triggers and API to receive the response to execute the route management.
+When API is triggerd, it receives and manages the response managing the routes.
 
-Then, it decides to which microfrontend it should load at which moment.
+It decides to which microfrontend it should load at which moment.
 
 Its worth also to remember that our orchestrator works like a reverse-proxy.
 
-Which means that usign the nginx reverse proxy, it provides one more abstraction level which assures the traffic flow from the client to the server.
+Which means that using the nginx reverse proxy, it provides one more abstraction level which assures the traffic flow from the client to the server.
 
 It means that wheneaver we send a request, our reverse-proxy double checks wheather we have to send to which docker (microfrontend01, 02, or 3...).
 
